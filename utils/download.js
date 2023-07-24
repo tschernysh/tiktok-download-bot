@@ -1,5 +1,4 @@
 const fs = require("fs");
-const puppeteer = require("puppeteer");
 const { exit } = require("process");
 const { resolve } = require("path");
 const { reject } = require("lodash");

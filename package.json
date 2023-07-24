@@ -17,7 +17,6 @@
     "inquirer": "^9.2.8",
     "node-fetch": "^2.6.12",
     "node-telegram-bot-api": "^0.61.0",
-    "nodemon": "^3.0.1",
-    "puppeteer": "^20.9.0"
+    "nodemon": "^3.0.1"
   }
 }
