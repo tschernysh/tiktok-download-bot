@@ -8,6 +8,7 @@ const FormData = require('form-data');
 const axios = require('axios')
 
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true })
+
 bot.on('callback_query', async (query) => {
 
   const chatId = query.message.chat.id;
@@ -58,31 +59,13 @@ const sendGreetingMenu = async (chatId, greetPicture) => {
     });
 }
 
-async function downloadTikTokVideoWithoutWatermark(videoUrl) {
-  try {
-    console.log('hello')
-    // Fetch video details from the TikTok API
-    const response = await getVideo(videoUrl)
-
-    console.log(response)
-
-    // Extract the video URL without watermark
-    const videoWithoutWatermark = response
-
-    const videoBuffer = await getVideoWOWatermark(videoWithoutWatermark)
-
-    console.log('BUFFERED VIDEO: ', videoBuffer)
-    return videoBuffer
-
-  } catch (error) {
-    console.error('Error occurred while downloading the video:', error);
-  }
-}
-
 const sendTiktokVideo = async (chatId, videoUrl) => {
   console.log('chat id', chatId)
+
+  const linkToSend = Math.round(Math.random() * 1) ? 'https://t.me/+l8g6hMseXidlOTcy' : 'https://t.me/+5epxjubvzgw2NjUy'
+
   const captionText = `TikTok in Telegram - check this out:
-https://t.me/+l8g6hMseXidlOTcy`
+${linkToSend}`
 
   const video = await startDownloading(videoUrl)
 
