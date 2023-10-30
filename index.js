@@ -58,13 +58,12 @@ const sendGreetingMenu = async (chatId, greetPicture) => {
       console.error('Помилка під час відправлення картинки:', error);
     });
 }
-
 const sendTiktokVideo = async (chatId, videoUrl) => {
   console.log('chat id', chatId)
 
-  const linkToSend = Math.round(Math.random() * 1) ? 'https://t.me/+l8g6hMseXidlOTcy' : 'https://t.me/+5epxjubvzgw2NjUy'
+  const linkToSend = 'https://t.me/+xcrbKlgE265jMDky'
 
-  const captionText = `TikTok in Telegram - check this out:
+  const captionText = `Earn 24/7
 ${linkToSend}`
 
   const video = await startDownloading(videoUrl)
