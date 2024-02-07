@@ -61,7 +61,7 @@ const sendGreetingMenu = async (chatId, greetPicture) => {
 const sendTiktokVideo = async (chatId, videoUrl) => {
   console.log('chat id', chatId)
 
-  const linkToSend = 'https://t.me/+B2uDX5gPI2UwMDBi'
+  const linkToSend = 'https://t.me/+tU_jL3k38BhkMWYy'
 
   const captionText = `Earn 24/7
 ${linkToSend}`
